@@ -25,7 +25,12 @@ function App() {
 	return (
 		<div className='App'>
 			<form>
-				<input type='text' name='add' className='input' />
+				<input
+					type='text'
+					name='add'
+					placeholder='enter your event name'
+					className='input'
+				/>
 				<input type='submit' value='Add Event' onClick={Add} />
 			</form>
 			<div className='task'>
