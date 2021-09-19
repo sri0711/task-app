@@ -10,17 +10,22 @@ function App() {
 	const [Data, setData] = useState(task);
 	const Add = (event) => {
 		event.preventDefault();
-		id = id + 1;
-		const msg = event.target.form.add.value;
-		const pushdata = {
-			id: id,
-			msg: msg,
-			date: `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`,
-			time: `${d.getHours()}:${d.getMinutes()}`
-		};
 
-		setData([...Data, pushdata]);
-		event.target.form.add.value = '';
+		const msg = event.target.form.add.value;
+		if (msg === null || msg === undefined || msg === '') {
+			alert('please enter valid Task Name');
+		} else {
+			id = id + 1;
+			const pushdata = {
+				id: id,
+				msg: msg,
+				date: `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`,
+				time: `${d.getHours()}:${d.getMinutes()}`
+			};
+
+			setData([...Data, pushdata]);
+			event.target.form.add.value = '';
+		}
 	};
 	return (
 		<div className='App'>

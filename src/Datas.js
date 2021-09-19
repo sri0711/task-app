@@ -25,7 +25,11 @@ function Datas(props) {
 							<h1>{task.id}</h1>
 							<h1 id={`ms${task.id}`}>{task.msg}</h1>
 							<form style={{ display: 'none' }} id={`fr${task.id}`}>
-								<input type='text' name='emsg' />
+								<input
+									type='text'
+									name='emsg'
+									style={{ width: '30%' }}
+								/>
 								<input
 									type='button'
 									value='save'
@@ -35,10 +39,18 @@ function Datas(props) {
 										const h1msg = document.getElementById(
 											`ms${task.id}`
 										);
-										h1msg.innerText = edmsg;
-										h1msg.style = 'display:flex';
-										document.getElementById(`fr${task.id}`).style =
-											'display:none';
+										if (
+											edmsg === null ||
+											edmsg === undefined ||
+											edmsg === ''
+										) {
+											alert('Please Enter Valid Take Name for edit');
+										} else {
+											h1msg.innerText = edmsg;
+											h1msg.style = 'display:flex';
+											document.getElementById(`fr${task.id}`).style =
+												'display:none';
+										}
 									}}
 								/>
 							</form>
