@@ -28,7 +28,7 @@ function Datas(props) {
 								<input
 									type='text'
 									name='emsg'
-									style={{ width: '30%' }}
+									style={{ width: '400px' }}
 								/>
 								<input
 									type='button'
@@ -44,7 +44,7 @@ function Datas(props) {
 											edmsg === undefined ||
 											edmsg === ''
 										) {
-											alert('Please Enter Valid Take Name for edit');
+											alert('Please Enter Valid Take Name for Edit');
 										} else {
 											h1msg.innerText = edmsg;
 											h1msg.style = 'display:flex';
