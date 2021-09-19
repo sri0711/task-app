@@ -1,0 +1,45 @@
+.render {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.main {
+	text-align: start;
+	border: 2px solid black;
+	width: 60%;
+	align-self: center;
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+.main .options {
+	height: 100%;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main .options button {
+	margin: 10px;
+	height: 30px;
+	background-color: black;
+	color: white;
+}
+.time {
+	margin-left: 20%;
+	display: flex;
+	flex-direction: row;
+	width: 30%;
+	justify-content: space-between;
+}
+.time p {
+	margin: 5px;
+}
+
+.msg {
+	display: flex;
+}
+.msg h1 {
+	margin: 5px;
+}
